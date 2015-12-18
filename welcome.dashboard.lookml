@@ -15,7 +15,7 @@
     dimensions: [events.event]
     measures: [events.count]
     filters:
-      events.created_at_time: 3 months
+      events.created_at_time: ''
     sorts: [events.count desc]
     limit: 500
     stacking: ''
