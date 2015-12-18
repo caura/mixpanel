@@ -7,18 +7,17 @@
 
   elements:
 
-  - name: add_a_unique_name_1449796417322
-    title: 'Number of Transforms'
-    type: single_value
+  - name: add_a_unique_name_1450476438608
+    title: "Event Funnel"
+    type: looker_column
     model: mixpanel
     explore: events
+    dimensions: [events.event]
     measures: [events.count]
     filters:
-      events.created_at_time: ''
-      events.event: transform%
+      events.created_at_time: 3 months
     sorts: [events.count desc]
     limit: 500
-    font_size: medium
     stacking: ''
     show_value_labels: false
     label_density: 25
@@ -36,28 +35,28 @@
     x_axis_scale: auto
     ordering: none
     show_null_labels: false
-    width: 4
-    height: 3
+    show_dropoff: true
+    width: 6
     
-  - name: add_a_unique_name_1449796417322
-    title: 'Number of Mappings'
-    type: single_value
+  - name: add_a_unique_name_1450476629162
+    title: 'Top 10 Refers'
+    type: table
     model: mixpanel
     explore: events
+    dimensions: [events.referrer]
     measures: [events.count]
     filters:
       events.created_at_time: ''
-      events.event: mapping%
     sorts: [events.count desc]
-    limit: 500
-    font_size: medium
+    limit: 10
+    show_view_names: true
+    show_row_numbers: true
     stacking: ''
     show_value_labels: false
     label_density: 25
     legend_position: center
     x_axis_gridlines: false
     y_axis_gridlines: true
-    show_view_names: true
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -68,40 +67,7 @@
     x_axis_scale: auto
     ordering: none
     show_null_labels: false
-    width: 4
-    height: 3
-    
-  - name: add_a_unique_name_1449796417322
-    title: 'Number of Plumbings'
-    type: single_value
-    model: mixpanel
-    explore: events
-    measures: [events.count]
-    filters:
-      events.created_at_time: ''
-      events.event: plumbing%
-    sorts: [events.count desc]
-    limit: 500
-    font_size: medium
-    stacking: ''
-    show_value_labels: false
-    label_density: 25
-    legend_position: center
-    x_axis_gridlines: false
-    y_axis_gridlines: true
-    show_view_names: true
-    y_axis_combined: true
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: true
-    show_x_axis_ticks: true
-    x_axis_scale: auto
-    ordering: none
-    show_null_labels: false
-    width: 4
-    height: 3 
+    show_dropoff: true
     
   - name: add_a_unique_name_1449796710824
     title: "Events by Region in the U.S.A"
@@ -116,7 +82,7 @@
     limit: 500
     map: usa
     show_view_names: true
-    width: 6
+    width: 6    
     
   - name: add_a_unique_name_1449797209146
     title: 'Visitors by Hour and Month-Over-Month Percent Change'
