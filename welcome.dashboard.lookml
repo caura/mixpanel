@@ -7,8 +7,8 @@
 
   elements:
 
-  - name: add_a_unique_name_1450476438608
-    title: "Event Funnel"
+  - name: add_a_unique_name_1450660486873
+    title: 'Event Funnel'
     type: looker_column
     model: mixpanel
     explore: events
@@ -17,7 +17,7 @@
     filters:
       events.created_at_time: ''
     sorts: [events.count desc]
-    limit: 500
+    limit: 10
     stacking: ''
     show_value_labels: false
     label_density: 25
@@ -36,7 +36,7 @@
     ordering: none
     show_null_labels: false
     show_dropoff: true
-    width: 6
+
     
   - name: add_a_unique_name_1450476629162
     title: 'Top 10 Refers'
