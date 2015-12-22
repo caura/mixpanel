@@ -31,10 +31,10 @@
       --  , FIRST_VALUE(lag.channel) OVER (PARTITION BY lag.distinct_id ORDER BY lag.created_at ASC rows unbounded preceding)
       --    AS channel  
       FROM lag
-      WHERE (lag.idle_time > 30 OR lag.idle_time IS NULL) 
-    sql_trigger_value: SELECT CURRENT_DATE
-    indexes: [session_start_at,next_session_start_at, distinct_id]
-    distkey: distinct_id
+      WHERE (lag.idle_time > 30 OR lag.idle_time IS NULL)
+#     sql_trigger_value: SELECT CURRENT_DATE
+#     indexes: [session_start_at,next_session_start_at, distinct_id]
+#     distkey: distinct_id
 
   fields:
   - measure: count
